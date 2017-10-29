@@ -9,14 +9,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.giphy.com/v1/gifs/random?api_key=SxKF8DHt5s6ltY5t6ljmEDwHk9coOmSe&tag=godfather')
+    fetch('https://api.giphy.com/v1/gifs/random?api_key=SxKF8DHt5s6ltY5t6ljmEDwHk9coOmSe&tag=godfather')
     .then( res => res.json() )
     .then( json => json.data.image_url )
     .then( (imageUrl) => {
       this.setState({
         imageUrl: imageUrl
       })
-    });
+    })
   }
 
   render() {
